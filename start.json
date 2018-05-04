@@ -1,0 +1,13 @@
+{
+    "apps": [{
+      "name": "selfblog",
+      "script": "npm",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "max_memory_restart": "1G",
+      "cwd": "./",
+      "autorestart": true,
+      "args": "run start",
+      "port": 3000
+    }]
+  }
