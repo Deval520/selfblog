@@ -1,0 +1,36 @@
+{
+  "name": "wx-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit --coverage --verbose",
+    "dev": "concurrently \"yarn watch-ts\" \"yarn watch-node\"",
+    "start": "node dist/server.js",
+    "build": "yarn build-ts",
+    "watch-node": "nodemon dist/server.js",
+    "build-ts": "tsc --project ./tsconfig",
+    "watch-ts": "tsc -p ./tsconfig -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/koa": "^2.0.45",
+    "@types/koa-bodyparser": "^4.2.0",
+    "@types/koa-router": "^7.0.28",
+    "@types/supertest": "^2.0.4",
+    "concurrently": "^3.5.1",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.3",
+    "supertest": "^3.0.0",
+    "ts-jest": "^22.4.4",
+    "typescript": "^2.8.3"
+  }
+}
